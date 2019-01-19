@@ -1,0 +1,33 @@
+# A template Travis CI file you can use to publish
+# your child theme to gh-pages
+
+# Deploy the pattern library to gh-pages
+language: node_js
+node_js:
+  - 10
+
+branches:
+  only:
+    master
+
+stages:
+  - deploy
+
+before_script:
+  - npm install
+  - npm install -g gulp-cli
+  - gulp build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  target-branch: gh-pages
+  local-dir: build
+  cache:
+    paths:
+      - node_modules
+  on:
+    branch:
+      - master

@@ -1,0 +1,38 @@
+{% import "macros/status.nunj" as status %}
+
+<p class="vf-text--body vf-text--body-xl">
+  Welcome to your {{page.title}}, this project is a template to easily make use of core Visual Framework patterns, override them, and add your own.
+</p>
+
+<div class="vf-grid vf-grid__col-2">
+  <div class="vf-box vf-box--tertiary">
+    <h3 class="vf-text vf-text--heading-l">🎨 Develop this child theme</h3>
+    <p class="vf-text"><em>n.b. The below is synopsis of this project's README.md</em></p>
+    <ol class="vf-list vf-list--ordered">
+      <li>Install the Visual Framework Child Theme template (✅ job done!);</li>
+      <li>Set your project title in factal.js;</li>
+      <li>Take a few minutes to read <a class="vf-link" href="https://github.com/visual-framework/vf-core">the basics of the Visual Framework</a>;</li>
+      <li>Override `vf-core` patterns;</li>
+      <li>Learn <a class="vf-link" href="docs/guidelines">how to create new patterns</a>;</li>
+      <li>Customise the layout of the pattern library by editing the Fractal theme in `tools/frctl-mandelbrot-vf-subtheme`;</li>
+      <li>Generate CSS and JS for your website;</li>
+      <li>Contribute new patterns back to the global `vf-core`;</li>
+      <li><a class="vf-link" href="https://embl-vf.slack.com/messages">Ask the community for help</a> or <a class="vf-link" href="http://github.com/visual-framework/vf-core/issues/">open an issue</a>; and</li>
+      <li>Delete this list so site builders can use the list to the right 👉</li>
+    </ol>
+  </div>
+
+  <div>
+    <h3 class="vf-text vf-text--heading-l">🖼 Build a website with these patterns</h3>
+    <ol class="vf-list vf-list--ordered">
+      <li><a href="#boilerplate">Grab a boilerplate</a>;</li>
+      <li>Browse <a href="#grids">the patterns</a> below;</li>
+      <li>Check out the <a href="docs/changelog">change log</a>; and</li>
+      <li><a href="#">Get support</a> (link to your forum, email or issue queue).</li>
+    </ol>
+  </div>
+</div>
+
+<div class="vf-divider"></div>
+
+{% include 'partials/browser/pattern-list.nunj' %}
