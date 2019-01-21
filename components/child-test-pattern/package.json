@@ -1,0 +1,27 @@
+{
+  "version": "0.0.1",
+  "name": "child-test-pattern",
+  "description": "child-test-pattern component",
+  "homepage": "http://dev.beta.embl.org/guidelines/visual-framework/dev-docs/",
+  "author": "VF",
+  "license": "Apache 2.0",
+  "style": "child-test-pattern.css",
+  "sass": "index.scss",
+  "main": "build/index.js",
+  "files": [
+    "index.scss",
+    "child-test-pattern.css"
+  ],
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "repo": "https://github.com/visual-framework/vf-core/tree/master/tree/master/components/child-test-pattern",
+  "bugs": {
+    "url": "https://github.com/visual-framework/vf-core/issues"
+  },
+  "dependencies": {
+    "@visual-framework/vf-sass-config": "^0.0.12"
+  },
+  "keywords": [
+    "fractal",
+    "component"
+  ]
+}
