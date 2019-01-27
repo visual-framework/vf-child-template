@@ -62,6 +62,11 @@ html, button {
 
 
 /* All Visual Framework Blocks */
+
+@import 'vf-box/vf-box.scss';
+  @import 'vf-box/vf-box--inlay.scss';
+  @import 'vf-box/vf-box--factoid.scss';
+
 @import 'vf-breadcrumbs/vf-breadcrumbs.scss';
 // @import 'vf-factoid/vf-factoid.scss';
 // @import 'vf-data-protection-banner/vf-data-protection-banner.scss';
@@ -93,6 +98,9 @@ html, button {
 @import 'vf-banner/vf-banner.scss';
 // @import 'vf-news-container/vf-news-container.scss';
 // @import 'vf-video-container/vf-video-container.scss';
+  @import 'vf-banner/vf-banner--fixed.scss';
+  @import 'vf-banner/vf-banner--gdpr.scss';
+  @import 'vf-banner/vf-banner--phase.scss';
 @import 'vf-footer/vf-footer.scss';
 
 /* All Visual Framework Deprecated Patterns */
