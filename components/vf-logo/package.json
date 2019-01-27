@@ -1,25 +1,25 @@
 {
   "version": "0.0.22",
-  "name": "@visual-framework/vf-favison",
-  "description": "vf-favison component",
+  "name": "@visual-framework/vf-logo",
+  "description": "vf-logo component",
   "homepage": "https://visual-framework.github.io/vf-core/",
   "author": "VF",
   "license": "Apache 2.0",
-  "style": "vf-favison.css",
+  "style": "vf-logo.css",
   "sass": "index.scss",
   "files": [
     "assets",
     "index.scss",
-    "vf-favison.scss",
-    "vf-favison.css",
-    "vf-favison.hbs",
-    "vf-favicon.config.yml"
+    "vf-logo.scss",
+    "vf-logo.css",
+    "vf-logo.hbs",
+    "vf-logo.config.yml"
   ],
   "test": "echo \"Error: no test specified\" && exit 1",
   "publishConfig": {
     "access": "public"
   },
-  "repo": "https://github.com/visual-framework/vf-core/tree/master/components/elements/vf-favicon",
+  "repo": "https://github.com/visual-framework/vf-core/tree/master/components/elements/vf-logo",
   "bugs": {
     "url": "https://github.com/visual-framework/vf-core/issues/new"
   },
