@@ -9,7 +9,7 @@
   "vfConfig": {
     "vfName": "Visual Framework Child Theme",
     "vfNamespace": "vct-",
-    "childThemeHomepage": "https://khawkins98.github.io/vf-child-playground"
+    "vfHomepage": "https://khawkins98.github.io/vf-child-playground"
   },
   "author": "",
   "license": "ISC",
