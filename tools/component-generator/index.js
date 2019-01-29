@@ -153,7 +153,7 @@ module.exports = class extends Generator {
         this.destinationPath(totalPath + 'package.json'),
         {
           componentName: fileName,
-          componentHomepage: config.vfConfig.childThemeHomepage,
+          componentHomepage: config.vfConfig.vfHomepage,
           componentStylesheet: fileName + '.scss'
         }
       );
