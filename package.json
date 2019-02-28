@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Testing out a child vf-core theme",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
-  },
   "vfConfig": {
     "vfName": "Visual Framework Child Theme",
     "vfNamespace": "vct-",
@@ -13,10 +10,23 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "@frctl/fractal": "^1.2.0-beta.1",
     "@frctl/mandelbrot": "^1.2.0",
+    "chalk": "^2.4.1",
+    "gulp": "^4.0.0",
+    "highlight.js": "^9.13.1",
+    "install": "^0.12.1",
+    "stylelint-config-sass-guidelines": "^5.2.0",
+    "stylelint-scss": "^3.4.0",
+    "theo": "^7.0.1",
+    "yeoman-generator": "^3.0.0",
+    "yosay": "^2.0.2"
+  },
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
     "@node-sass/node-module-importer": "^1.2.3",
     "@visual-framework/vf-banner": "latest",
     "@visual-framework/vf-blockquote": "latest",
@@ -49,9 +59,9 @@
     "@visual-framework/vf-text": "latest",
     "@visual-framework/vf-utility-classes": "latest",
     "browser-sync": "^2.26.0",
-    "chalk": "^2.4.2",
-    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-better-rollup": "^3.4.0",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
@@ -64,23 +74,38 @@
     "gulp-sass-lint": "^1.4.0",
     "gulp-shell": "^0.6.5",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylelint": "^8.0.0",
     "gulp-svgo": "^2.1.0",
     "gulp-theo": "^2.0.0",
     "gulp-uglify": "^3.0.1",
     "gulp-watch": "^5.0.1",
-    "install": "^0.12.1",
+    "husky": "^1.3.1",
     "node-normalize-scss": "^8.0.0",
     "npm": "^6.7.0",
-    "postcss-reporter": "^6.0.1",
+    "postcss-reporter": "^6.0.0",
     "postcss-scss": "^2.0.0",
-    "prettier": "^1.16.1",
+    "prettier": "^1.15.2",
     "prettier-stylelint": "^0.4.2",
-    "stylelint": "^9.10.1",
-    "stylelint-config-sass-guidelines": "^5.2.0",
-    "stylelint-order": "^2.0.0",
-    "stylelint-scss": "^3.5.1",
-    "theo": "^7.0.1",
-    "yeoman-generator": "^3.2.0",
-    "yosay": "^2.0.2"
+    "rollup-plugin-includepaths": "^0.2.3",
+    "stylelint": "^9.8.0",
+    "stylelint-order": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [
+    "design",
+    "system",
+    "css",
+    "visual",
+    "framework",
+    "VF",
+    "pattern",
+    "library"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-push": "gulp prepush-test"
+    }
   }
 }
