@@ -1,51 +1,47 @@
 {% import "macros/status.nunj" as status %}
 
-<h1 class="vf-text vf-text--display-xl vf-text--invert">All the patterns</h1>
+<h1 class="vf-text vf-text--heading-xl vf-text--invert">All the patterns</h1>
+
 
 {% macro patternByType(displayName='Grids', type='grid', description='') %}
 <section class="vf-grid vf-grid__col-4">
   <section data-description="label area">
-    <h4 class="vf-text vf-text--heading-s">{{ displayName }}</h4>
+    <h4 class="vf-text vf-text--heading-s">
+      {{ displayName }}
+      <a id="{{ type }}"></a>
+    </h4>
     <p class="vf-text--body vf-text--body-r">
       {{ description }}
     </p>
   </section>
-  <section data-description="pattern list" class="vf-grid__col--span-3">
+  <section data-description="pattern list">
     <div class="vf-grid vf-grid__col-3">
-      {% asyncEach items in frctl.components %}
-        {% if items.context['pattern-type'] == type %}
-        <p class="vf-text">
-          <a class="vf-link" href="{{ path(frctl.theme.urlFromRoute('component', { handle: items.handle })) }}">{{ items.label }}</a>
-          {% if items.status %}{{ status.unlabelled(items.status) }}{% endif %}
-          {% if items.baseHandle.slice(0,3) == "vf-" %}
-          <!-- Pattern is part of vf-core but has been overridden -->
-          <span class="vf-tag">🖋overridden</span>
-          {% endif %}
+      {% asyncEach component in frctl.components %}
 
+        {# handle component collections, aka "subpatterns" #}
+        {% if component.isCollection == true and component.isHidden == false %}
+          {% for subcomponent in component %}
+            {% if subcomponent.context['pattern-type'] == type and subcomponent.isHidden != true %}
+              <p class="vf-text">
+                <a class="vf-link" href="{{ path(frctl.theme.urlFromRoute('component', { handle: subcomponent.handle })) }}">{{ subcomponent.label }}</a>
+                {% if subcomponent.status %}{{ status.unlabelled(subcomponent.status) }}{% endif %}
+              </p>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        {% if component.context['pattern-type'] == type %}
+        <p class="vf-text">
+          <a class="vf-link" href="{{ path(frctl.theme.urlFromRoute('component', { handle: component.handle })) }}">{{ component.label }}</a>
+          {% if component.status %}{{ status.unlabelled(component.status) }}{% endif %}
         </p>
         {% endif %}
-
-        {# show any patterns from node_module's vf-core #}
-        {% if items['handle'] == 'vf-core-patterns' %}
-          {% asyncEach corePattern in items %}
-            {% if corePattern.context['pattern-type'] == type %}
-            <p class="vf-text">
-              <a class="vf-link" href="{{ path(frctl.theme.urlFromRoute('component', { handle: corePattern.handle })) }}">{{ corePattern.label }}</a>
-              {% if corePattern.status %}{{ status.unlabelled(corePattern.status) }}{% endif %}
-              <span class="vf-tag">🔒core</span>
-            </p>
-            {% endif %}
-          {% endeach %}
-        {% endif %}
-
-
       {% endeach %}
     </div>
   </section>
 </section>
 <hr class="vf-divider vf-u-margin__bottom-xl vf-u-margin__top-xl">
 {% endmacro %}
-
 
 {{ patternByType('Grids', type='grid', description='Put stuff in columns.') }}
 
