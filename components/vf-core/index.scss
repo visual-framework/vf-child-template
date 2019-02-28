@@ -38,13 +38,14 @@ html, button {
 @import 'vf-content/vf-content.scss';
 
 /* All Visual Framework grids */
+
 @import 'vf-grid/vf-grid.scss';
 // @import 'vf-inlay/vf-inlay.scss';
 @import 'vf-grid-page/vf-grid-page.scss';
 // @import 'embl-grid/embl-grid.scss';
 
-
 /* All Visual Framework Elements */
+
 @import 'vf-badge/vf-badge.scss';
 @import 'vf-link/vf-link.scss';
 @import 'vf-logo/vf-logo.scss';
@@ -76,6 +77,10 @@ html, button {
 @import 'vf-header/vf-header.scss';
 @import 'vf-masthead/vf-masthead.scss';
 @import 'vf-navigation/vf-navigation.scss';
+  @import 'vf-navigation/vf-navigation--global.scss';
+  @import 'vf-navigation/vf-navigation--main.scss';
+  @import 'vf-navigation/vf-navigation--additional.scss';
+
 @import 'vf-section-header/vf-section-header.scss';
 // @import 'vf-activity-list/vf-activity-list.scss';
 @import 'vf-contact/vf-contact.scss';
@@ -98,18 +103,24 @@ html, button {
 @import 'vf-banner/vf-banner.scss';
 // @import 'vf-news-container/vf-news-container.scss';
 // @import 'vf-video-container/vf-video-container.scss';
+  @import 'vf-banner/vf-banner--phase.scss';
   @import 'vf-banner/vf-banner--fixed.scss';
   @import 'vf-banner/vf-banner--gdpr.scss';
-  @import 'vf-banner/vf-banner--phase.scss';
+
+
 @import 'vf-footer/vf-footer.scss';
 
+/* All Visual Framework Boilerplates */
+
 /* All Visual Framework Deprecated Patterns */
+
 @import 'vf-tag/vf-tag.scss';
 // @import 'vf-job-description/vf-job-description.scss';
 // @import 'vf-news-item/vf-news-item.scss';
 // @import 'vf-snippet/vf-snippet.scss';
 
 /* All Visual Framework Utility and high-specificity patterns */
+
 @import 'vf-utility-classes/vf-utility-classes.scss';
 @import 'vf-heading/vf-heading.scss';
 @import 'vf-text/vf-text.scss';
