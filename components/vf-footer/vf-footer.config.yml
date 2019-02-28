@@ -1,5 +1,5 @@
 title: Footer
 label: Footer
-preview: '@preview--nogrid'
+preview: '@preview--blocks'
 context:
   pattern-type: block
