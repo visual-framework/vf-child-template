@@ -1,10 +1,10 @@
-# <%= componentName %> Pattern
+# <%= componentName %> Component
 
 [![npm version](https://badge.fury.io/js/%40visual-framework%2F<%= componentName %>.svg)](https://badge.fury.io/js/%40visual-framework%2F<%= componentName %>)
 
 ## Install
 
-This repository is distributed with [npm][npm]. After [installing npm][install-npm], you can install `primer-buttons` with this command.
+This repository is distributed with [npm][npm]. After [installing npm][install-npm], you can install `<%= componentName %>` with this command.
 
 ```
 $ npm install --save @visual-framework/<%= componentName %>
