@@ -116,7 +116,7 @@ gulp.task('css', function() {
   // only include the file if it exists.
   var availableComponents = {}; // track the components avaialble
   return gulp
-    .src(['components/**/*.scss'], {
+    .src(['components/**/**/*.scss'], {
       allowEmpty: true,
       ignore: ['components/**/index.scss']
     })
@@ -126,7 +126,6 @@ gulp.task('css', function() {
       data.forEach(function (value, i) {
         // Keep only the file name
         var value = value.history[0].split(/[/]+/).pop();
-
         availableComponents[value] = true;
       });
 
